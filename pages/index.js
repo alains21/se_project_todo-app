@@ -31,7 +31,6 @@ const renderTodo = (item) => {
 
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
-  newTodoValidator.resetValidation();
 });
 
 addTodoCloseBtn.addEventListener("click", () => {
@@ -51,7 +50,7 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   renderTodo(values);
   closeModal(addTodoPopup);
-  addTodoForm.reset();
+
   newTodoValidator.resetValidation();
 });
 
