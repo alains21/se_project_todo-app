@@ -11,8 +11,6 @@ import TodoCounter from "../components/TodoCounter.js";
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopupEl.querySelector(".popup__form");
-const addTodoCloseBtn = addTodoPopupEl.querySelector(".popup__close");
-const todosList = document.querySelector(".todos__list");
 
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
 
@@ -34,7 +32,6 @@ const addTodoPopup = new PopupWithForm({
 
     addTodoPopup.close();
     newTodoValidator.resetValidation();
-    addTodoForm.reset();
   },
 });
 
@@ -68,24 +65,9 @@ const section = new Section({
 
 section.renderItems();
 
-// const openModal = (modal) => {
-//   modal.classList.add("popup_visible");
-// };
-
-// const closeModal = (modal) => {
-//   modal.classList.remove("popup_visible");
-// };
-
-// const renderTodo = (item) => {
-//   const todo = generateTodo(item);
-//   todosList.append(todo);
-// };
-
 addTodoButton.addEventListener("click", () => {
   addTodoPopup.open();
 });
-
-// initialTodos.forEach(renderTodo);
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();

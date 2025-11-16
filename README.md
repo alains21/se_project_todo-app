@@ -12,6 +12,4 @@ This to-do list app uses JavaScript to check the form as you type, show errors, 
 
 ## Deployment
 
-This project is deployed on GitHub Pages:
-
-- https://github.com/alains21/se_project_todo-app
+Live site: https://alains21.github.io/se_project_todo-app/
